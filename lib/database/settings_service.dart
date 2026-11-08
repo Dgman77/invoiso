@@ -205,8 +205,8 @@ class SettingsService {
   }
 
   static Future<bool> getShowInvoiceFooterBranding() async {
-    final val = await getSetting(SettingKey.showInvoiceFooterBranding);
-    return val != 'false'; // default ON
+    // Branding is always shown on invoices; the user-facing toggle was removed.
+    return true;
   }
 
   static Future<void> setShowInvoiceFooterBranding(bool show) async {
